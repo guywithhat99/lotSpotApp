@@ -1,17 +1,21 @@
-//
-//  lotSpotAppApp.swift
-//  lotSpotApp
-//
-//  Created by Jack on 2/17/26.
-//
-
 import SwiftUI
+import FirebaseCore
 
 @main
 struct lotSpotAppApp: App {
+    @StateObject private var env = AppEnvironment()
+
+    init() {
+        FirebaseApp.configure()
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(env.auth)
+                .environmentObject(env.lots)
+                .environmentObject(env.devices)
+                .environmentObject(env.ble)
         }
     }
 }

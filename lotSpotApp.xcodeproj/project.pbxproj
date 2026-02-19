@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0469D9352F4699B50029061B /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D9342F4699B50029061B /* FirebaseAppCheck */; };
+		0469D9372F4699B50029061B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D9362F4699B50029061B /* FirebaseAuth */; };
+		0469D9392F4699B50029061B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D9382F4699B50029061B /* FirebaseCore */; };
+		0469D93B2F4699B50029061B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D93A2F4699B50029061B /* FirebaseDatabase */; };
+		0469D93D2F4699B50029061B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D93C2F4699B50029061B /* FirebaseFirestore */; };
+		0469D93F2F4699B50029061B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D93E2F4699B50029061B /* FirebaseFunctions */; };
+		0469D9412F4699B50029061B /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 0469D9402F4699B50029061B /* FirebaseInstallations */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		042F16612F459842006EA25A /* lotSpotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lotSpotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +33,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0469D9352F4699B50029061B /* FirebaseAppCheck in Frameworks */,
+				0469D9412F4699B50029061B /* FirebaseInstallations in Frameworks */,
+				0469D9392F4699B50029061B /* FirebaseCore in Frameworks */,
+				0469D93B2F4699B50029061B /* FirebaseDatabase in Frameworks */,
+				0469D93F2F4699B50029061B /* FirebaseFunctions in Frameworks */,
+				0469D93D2F4699B50029061B /* FirebaseFirestore in Frameworks */,
+				0469D9372F4699B50029061B /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,13 @@
 			);
 			name = lotSpotApp;
 			packageProductDependencies = (
+				0469D9342F4699B50029061B /* FirebaseAppCheck */,
+				0469D9362F4699B50029061B /* FirebaseAuth */,
+				0469D9382F4699B50029061B /* FirebaseCore */,
+				0469D93A2F4699B50029061B /* FirebaseDatabase */,
+				0469D93C2F4699B50029061B /* FirebaseFirestore */,
+				0469D93E2F4699B50029061B /* FirebaseFunctions */,
+				0469D9402F4699B50029061B /* FirebaseInstallations */,
 			);
 			productName = lotSpotApp;
 			productReference = 042F16612F459842006EA25A /* lotSpotApp.app */;
@@ -94,6 +118,9 @@
 			);
 			mainGroup = 042F16582F459842006EA25A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 042F16622F459842006EA25A /* Products */;
 			projectDirPath = "";
@@ -251,10 +278,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TV4FUVAP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "LotSpot uses Bluetooth to provision parking lot devices.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -282,8 +311,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TV4FUVAP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "LotSpot uses Bluetooth to provision parking lot devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +359,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0469D9342F4699B50029061B /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		0469D9362F4699B50029061B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0469D9382F4699B50029061B /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		0469D93A2F4699B50029061B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		0469D93C2F4699B50029061B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0469D93E2F4699B50029061B /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		0469D9402F4699B50029061B /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469D9332F4699B50029061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 042F16592F459842006EA25A /* Project object */;
 }
